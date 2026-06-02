@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+store_intelligence.db
+data/*.mp4
+venv/
+__pycache__/
+*.db
+*.pt
+data/*.mp4
