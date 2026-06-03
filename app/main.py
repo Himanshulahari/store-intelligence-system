@@ -63,14 +63,26 @@ def ingest_event(
 def analytics(db: Session = Depends(get_db)):
     events = db.query(Event).all()
 
-    occupancy_events = [
+    entries = len([
         e for e in events
-        if e.event_type == "occupancy"
-    ]
+        if e.event_type == "entry"
+    ])
+
+    zones = len([
+        e for e in events
+        if e.event_type == "zone_entered"
+    ])
+
+    billing = len([
+        e for e in events
+        if e.event_type == "queue_completed"
+    ])
 
     return {
         "total_events": len(events),
-        "occupancy_events": len(occupancy_events),
+        "entries": entries,
+        "zone_events": zones,
+        "billing_events": billing,
         "stores_monitored": len(
             set(e.store_id for e in events)
         )

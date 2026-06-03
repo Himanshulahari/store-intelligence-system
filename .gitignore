@@ -8,3 +8,6 @@ __pycache__/
 *.db
 *.pt
 data/*.mp4
+.pytest_cache/
+*.zip
+yolov8n.pt

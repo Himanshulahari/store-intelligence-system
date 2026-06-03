@@ -4,8 +4,25 @@ import cv2
 import requests
 from datetime import datetime
 import uuid
+from emit import (
+    create_entry_event,
+    create_zone_event,
+    create_queue_event
+)
 
-camera_name = "CAM4"
+VIDEO_PATH = "data/store1/CAM 5 - billing.mp4"
+CAMERA_NAME = "CAM 5 - billing"
+
+video_name = VIDEO_PATH.lower()
+
+if "entry" in video_name:
+    CAMERA_TYPE = "entry"
+
+elif "billing" in video_name:
+    CAMERA_TYPE = "billing"
+
+else:
+    CAMERA_TYPE = "zone"
 
 model = YOLO("yolov8n.pt")
 
@@ -14,7 +31,7 @@ tracker = sv.ByteTrack()
 box_annotator = sv.BoxAnnotator()
 label_annotator = sv.LabelAnnotator()
 
-cap = cv2.VideoCapture(f"data/{camera_name}.mp4")
+cap = cv2.VideoCapture(VIDEO_PATH)
 
 previous_count = -1
 unique_visitors = set()
@@ -38,18 +55,31 @@ while True:
 
     if count != previous_count:
 
+        if CAMERA_TYPE == "entry":
+
+            event = create_entry_event(
+                count,
+                CAMERA_NAME
+            )
+
+        elif CAMERA_TYPE == "billing":
+
+            event = create_queue_event(
+                count,
+                CAMERA_NAME
+            )
+
+        else:
+
+            event = create_zone_event(
+                count,
+                "ZONE_01",
+                CAMERA_NAME
+            )
+
         requests.post(
             "http://127.0.0.1:8000/events/ingest",
-            json={
-                "event_id": str(uuid.uuid4()),
-                "store_id": "store_1",
-                "visitor_id": f"visitor_{count}",
-                "event_type": "occupancy",
-                "timestamp": datetime.now().isoformat(),
-                "zone_id": camera_name,
-                "confidence": 0.95,
-                "is_staff": False
-            }
+            json=event
         )
 
         previous_count = count
@@ -76,7 +106,7 @@ while True:
 
     cv2.putText(
         frame,
-        f"Camera: {camera_name}",
+        f"Camera: {CAMERA_NAME}",
         (20, 150),
         cv2.FONT_HERSHEY_SIMPLEX,
         1,
