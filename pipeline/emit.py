@@ -1,5 +1,10 @@
 from datetime import datetime
 import uuid
+import json
+
+def emit_event(event):
+    with open("output/events.jsonl", "a") as file:
+        file.write(json.dumps(event) + "\n")
 
 
 def create_entry_event(track_id, camera_id):

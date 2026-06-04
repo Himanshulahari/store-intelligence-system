@@ -1,0 +1,17 @@
+{"event_id": "43a454db-5b9b-47bb-9f92-0bfd347083b3", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:14.187448"}
+{"event_id": "5eaeb313-153f-43f1-8a96-a9fd5cfe6fcf", "event_type": "queue_completed", "visitor_id": "visitor_0", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:16.748323"}
+{"event_id": "9a791e15-8543-434a-b877-b8900cccf02a", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:16.877324"}
+{"event_id": "fc135a34-e15d-4907-8f8c-74c4d86d97eb", "event_type": "queue_completed", "visitor_id": "visitor_0", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:19.534468"}
+{"event_id": "720d9524-62b4-45dd-aa0e-dc3da7434d3b", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:19.764024"}
+{"event_id": "37c46b3c-e316-420e-9aff-c8afd93e7ae6", "event_type": "queue_completed", "visitor_id": "visitor_0", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:22.086271"}
+{"event_id": "09d6e420-9937-45fa-9609-0382907b9632", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:22.239390"}
+{"event_id": "614a3c8d-7fa4-4929-8fd8-9436d36378bb", "event_type": "queue_completed", "visitor_id": "visitor_0", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:27.871407"}
+{"event_id": "9911a99c-012a-46d0-b507-8466c300d78a", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:28.104125"}
+{"event_id": "4b07b859-b0a4-41ab-99fe-2412281151a0", "event_type": "queue_completed", "visitor_id": "visitor_0", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:29.711480"}
+{"event_id": "8682c057-7ba2-491c-82b8-c97455744df1", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:39.976745"}
+{"event_id": "ed92ff8d-fbcf-492a-8b42-5187098b1ab2", "event_type": "queue_completed", "visitor_id": "visitor_2", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:40.703756"}
+{"event_id": "32700f8f-e1f4-4cd4-8040-99b97a0b096a", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:40.955345"}
+{"event_id": "4a2e3eaf-6f53-4522-aab8-52f7f93b76e8", "event_type": "queue_completed", "visitor_id": "visitor_2", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:41.521031"}
+{"event_id": "eb087dc3-95ed-4a26-bc2f-f03d4391f80a", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:41.786615"}
+{"event_id": "9b22e28b-2033-4c5b-ac29-333748365c1d", "event_type": "queue_completed", "visitor_id": "visitor_2", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:42.491421"}
+{"event_id": "bda4d49f-f257-4f4f-98d1-c4c8f6561b66", "event_type": "queue_completed", "visitor_id": "visitor_1", "camera_id": "CAM 5 - billing", "event_timestamp": "2026-06-04T20:08:43.236852"}

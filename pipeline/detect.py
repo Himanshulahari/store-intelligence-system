@@ -7,7 +7,8 @@ import uuid
 from emit import (
     create_entry_event,
     create_zone_event,
-    create_queue_event
+    create_queue_event,
+    emit_event
 )
 
 VIDEO_PATH = "data/store1/CAM 5 - billing.mp4"
@@ -32,12 +33,15 @@ box_annotator = sv.BoxAnnotator()
 label_annotator = sv.LabelAnnotator()
 
 cap = cv2.VideoCapture(VIDEO_PATH)
+print("Video Opened:", cap.isOpened())
 
 previous_count = -1
 unique_visitors = set()
 
 while True:
     ret, frame = cap.read()
+
+    print("RET =", ret)
 
     if not ret:
         break
@@ -76,6 +80,12 @@ while True:
                 "ZONE_01",
                 CAMERA_NAME
             )
+
+        print("EVENT GENERATED:", event)
+
+        emit_event(event)
+
+        print("EVENT SAVED")
 
         requests.post(
             "http://127.0.0.1:8000/events/ingest",
