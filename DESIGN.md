@@ -268,6 +268,8 @@ Decision:
 
 JSONL was selected as the canonical event representation.
 
+Generated events are written to `output/events.jsonl` and follow the challenge event schema. The JSONL log serves as an intermediate event layer between perception and analytics while also satisfying the challenge deliverable requirements.
+
 ---
 
 # Event Pipeline Design
@@ -298,15 +300,19 @@ Examples:
 
 ### Step 5
 
-Events are sent to FastAPI.
+Generated events are written to `output/events.jsonl`.
 
 ### Step 6
 
-Events are stored in SQLite.
+Events are sent to the FastAPI ingestion endpoint.
 
 ### Step 7
 
-Analytics endpoints aggregate insights.
+Events are stored in SQLite.
+
+### Step 8
+
+Analytics endpoints aggregate insights and expose metrics through REST APIs.
 
 ---
 

@@ -210,7 +210,7 @@ Event-driven processing provides:
 
 ### Final Decision
 
-Video processing generates structured events, and analytics operate on those events.
+Video processing generates structured events, writes them to `output/events.jsonl`, and exposes them through FastAPI APIs. Analytics operate on these generated events rather than raw video streams.
 
 ---
 
@@ -242,7 +242,9 @@ Generated metrics include:
 
 ### Final Decision
 
-Event-based analytics provide a clean and scalable architecture.
+JSONL was selected as the canonical event representation.
+
+Generated events are written to `output/events.jsonl`, which follows the challenge event schema and serves as the event log deliverable for downstream analytics and evaluation.
 
 ---
 

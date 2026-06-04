@@ -317,7 +317,7 @@ The system generates:
 ## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Himanshulahari/store-intelligence-system.git
 cd Store_Intelligence_Challenge
 ```
 
@@ -395,8 +395,12 @@ The pipeline automatically:
 
 * Detects people
 * Tracks visitors
-* Generates events
-* Stores analytics data
+* Generates structured events
+* Stores events in SQLite
+* Writes generated events to:
+
+```text
+output/events.jsonl
 
 ---
 
@@ -443,8 +447,9 @@ The system successfully:
 
 * Detects customers from CCTV feeds
 * Tracks visitors using ByteTrack
-* Generates structured events
+* Generates structured retail events
 * Stores events in SQLite
+* Produces JSONL event logs (`output/events.jsonl`)
 * Exposes analytics through FastAPI APIs
 * Provides real-time monitoring dashboards
 
